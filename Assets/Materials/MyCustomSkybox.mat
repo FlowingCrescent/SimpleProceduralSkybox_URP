@@ -86,18 +86,18 @@ Material:
     - _GradientLength: 0.173
     - _HorizonColorHeight: 0.159
     - _Metallic: 0
-    - _MilkywayIntensity: 0
+    - _MilkywayIntensity: 0.026666641
     - _MoonIntensity: 2.01
     - _OcclusionStrength: 1
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _ScatteringIntensity: 0.98333335
+    - _ScatteringIntensity: 0.9666667
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _StarIntensity: 0.48333335
-    - _SunIntensity: 1
+    - _StarIntensity: 0.51666665
+    - _SunIntensity: 0.9666667
     - _SunSize: 0.02
     - _Surface: 0
     - _WorkflowMode: 1
@@ -112,11 +112,11 @@ Material:
     - _MilkywayCol1: {r: 1, g: 1, b: 1, a: 1}
     - _MilkywayCol2: {r: 1, g: 1, b: 1, a: 1}
     - _MoonCol: {r: 0.7287736, g: 0.8537057, b: 0.9716981, a: 1}
-    - _MoonDirectionWS: {r: 0.00000008739282, g: 0.026177103, b: 0.99965733, a: 0}
+    - _MoonDirectionWS: {r: 0.00000008739282, g: -0.026176952, b: 0.99965733, a: 0}
     - _SkyColor: {r: 0.13830544, g: 0.48582125, b: 0.7924528, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _SunCol: {r: 0.990566, g: 0.93365234, b: 0.62144, a: 1}
-    - _SunDirectionWS: {r: -0.00000008739282, g: -0.026176924, b: -0.9996574, a: 0}
+    - _SunDirectionWS: {r: -0.00000008739282, g: 0.026177103, b: -0.9996574, a: 0}
     - _dayTimeSkyCol: {r: 0, g: 0.65999997, b: 0.73, a: 1}
 --- !u!114 &246102356250633457
 MonoBehaviour:

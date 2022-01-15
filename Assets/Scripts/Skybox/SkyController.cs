@@ -19,6 +19,7 @@ public class SkyController : MonoBehaviour
     public Transform milkyWayTransform;
     public Material skyboxMat;
     private float updateGITime = 0f;
+    private bool dayOrNightChanging = false;
 
     private const string _SkyGradientTex = "_SkyGradientTex";
     private const string _StarIntensity = "_StarIntensity";
@@ -39,10 +40,6 @@ public class SkyController : MonoBehaviour
         skyTimeDataController = GetComponent<SkyTimeDataController>();
     }
 
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
@@ -52,8 +49,22 @@ public class SkyController : MonoBehaviour
             time += Time.deltaTime;
             updateGITime += Time.deltaTime;
         }
-        
+
         time %= 24f;
+        if(!dayOrNightChanging)
+        {
+            if(Mathf.Abs(time - 6f) < 0.01f)
+            {
+                Debug.Log("Day");
+                StartCoroutine("ChangeToDay");
+            }
+            if(Mathf.Abs(time - 18f) < 0.01f)
+            {
+                Debug.Log("Night");
+                StartCoroutine("ChangeToNight");
+            }
+        }
+
 
         //Update GI
         if(updateGITime > 0.5f)
@@ -101,4 +112,43 @@ public class SkyController : MonoBehaviour
         skyboxMat.SetMatrix(_MilkyWayWorld2Local, milkyWayTransform.worldToLocalMatrix);
 
     }
+
+
+    IEnumerator ChangeToNight()
+    {
+        dayOrNightChanging = true;
+        Light moon = mainLight_Sun;
+        Light sun = mainLight_Moon;
+        moon.enabled = true;
+        float updateTime = 0f;
+        while(updateTime <= 1)
+        {
+            updateTime += Time.deltaTime;
+            moon.intensity = Mathf.Lerp(moon.intensity, 0.7f, updateTime);
+            sun.intensity = Mathf.Lerp(sun.intensity, 0, updateTime);
+            
+            yield return 0;
+        }
+        sun.enabled = false;
+        dayOrNightChanging = false;
+    }
+    IEnumerator ChangeToDay()
+    {
+        dayOrNightChanging = true;
+        Light moon = mainLight_Sun;
+        Light sun = mainLight_Moon;
+        sun.enabled = true;
+        float updateTime = 0f;
+        while(updateTime <= 1)
+        {
+            moon.intensity = Mathf.Lerp(moon.intensity, 0f, updateTime);
+            sun.intensity = Mathf.Lerp(sun.intensity, 1f, updateTime);
+            updateTime += Time.deltaTime;
+
+            yield return 0;
+        }
+        moon.enabled = false;
+        dayOrNightChanging = false;
+    }
+
 }
