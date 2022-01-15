@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e33dd3dca4ce9049afaa5f8895d3fc8, type: 3}
+  m_Name: Time 18
+  m_EditorClassIdentifier: 
+  skyColorGradient:
+    serializedVersion: 2
+    key0: {r: 0.8867924, g: 0.3869412, b: 0.24679601, a: 1}
+    key1: {r: 0.7882353, g: 0.6295819, b: 0.4117647, a: 1}
+    key2: {r: 0.6399964, g: 0.73072624, b: 0.8867924, a: 0}
+    key3: {r: 0.30535775, g: 0.44503197, b: 0.8867924, a: 0}
+    key4: {r: 0.13861692, g: 0.307534, b: 0.8396226, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 19853
+    ctime2: 43369
+    ctime3: 51079
+    ctime4: 51079
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
+  sunIntensity: 0.5
+  scatteringIntensity: 0.8
+  starIntensity: 0.5
+  milkywayIntensity: 0
+  skyColorGradientTex: {fileID: 0}
